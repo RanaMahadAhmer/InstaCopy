@@ -1,14 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:insta/MessagesScreen/RequestsScreen/Components/MessageControl/message_control_screen.dart';
 
-class MessageRequestPrivacy extends StatefulWidget {
-  const MessageRequestPrivacy({super.key});
+class MessageRequestControl extends StatefulWidget {
+  const MessageRequestControl({super.key});
 
   @override
-  State<MessageRequestPrivacy> createState() => _MessageRequestPrivacyState();
+  State<MessageRequestControl> createState() => _MessageRequestControlState();
 }
 
-class _MessageRequestPrivacyState extends State<MessageRequestPrivacy> {
+class _MessageRequestControlState extends State<MessageRequestControl> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,7 +19,9 @@ class _MessageRequestPrivacyState extends State<MessageRequestPrivacy> {
           style: TextStyle(fontSize: 12),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, MessageControlScreen.id);
+          },
           child: const Text(
             "Choose who can message you",
             style: TextStyle(color: Colors.blueAccent, fontSize: 12),

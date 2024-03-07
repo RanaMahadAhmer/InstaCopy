@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:insta/MessagesScreen/RequestsScreen/Components/message_request_privacy.dart';
+import 'package:insta/MessagesScreen/RequestsScreen/Components/message_request_control.dart';
 
 class RequestsScreen extends StatefulWidget {
   static String id = "RequestsScreen";
@@ -19,7 +19,7 @@ class _RequestsScreenState extends State<RequestsScreen> {
       ),
       body: const Column(
         children: [
-          MessageRequestPrivacy(),
+          MessageRequestControl(),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
             child: Column(
